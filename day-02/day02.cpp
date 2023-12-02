@@ -1,4 +1,5 @@
 #include "../utils.h"
+#include "day02.h"
 #include<string>
 #include<map>
 
@@ -28,7 +29,7 @@ void splitStringOnSpace(std::string& s, std::vector<std::string>& result) {
     result.push_back(substring);
 }
 
-int main() {
+int day02() {
     // Initialize a vector to store the file input and set the input file name.
     std::vector<std::string> lines;
     std::string fileName = "../day-02/input.txt";
@@ -86,7 +87,7 @@ int main() {
     }
 
     // Print the result.
-    printf("Result: %d\n", counter);
+    printf("Result (Part 1): %d\n", counter);
 
     // ---------------- Part 2 ----------------
     int sumOfPowers = 0;
@@ -129,5 +130,5 @@ int main() {
     }
 
     // Print the result.
-    printf("Result: %d\n", sumOfPowers);
+    printf("Result (Part 2): %d\n", sumOfPowers);
 }

@@ -1,4 +1,5 @@
 #include "../utils.h"
+#include "day01.h"
 #include<string>
 
 std::vector<std::string> digits = {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
@@ -82,5 +83,5 @@ int day01() {
     }
 
     // Print the result.
-    printf("Result: %d\n", counter);
+    printf("Result (Part 2): %d\n", counter);
 }
