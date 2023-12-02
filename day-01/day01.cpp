@@ -34,7 +34,7 @@ bool isDigit(std::string& line, int index, int* digit) {
     return substringStartsWithDigit;
 }
 
-int main() {
+int day01() {
     // Initialize a vector to store the file input and set the input file name.
     std::vector<std::string> lines;
     std::string fileName = "../day-01/input.txt";
