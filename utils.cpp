@@ -1,4 +1,5 @@
 #include "utils.h"
+#include<string>
 
 // Utility function to read a file and store each line in a vector.
 int readFile(std::string& fileName, std::vector<std::string>& lines) {
@@ -24,3 +25,28 @@ int readFile(std::string& fileName, std::vector<std::string>& lines) {
     return 0;
 }
 
+void splitOnSpace(std::string& line, std::vector<std::string>& words) {
+    // Create an accumulator to store the current word.
+    std::string acc = "";
+
+    // Loop through each character in the line.
+    for (char c: line) {
+        // If the character is a space, add the accumulator to the words vector and reset the accumulator.
+        if (c == ' ') {
+            if (acc.empty()) {
+                continue;
+            }
+            words.push_back(acc);
+            acc = "";
+        }
+        // If the character is not a space, add it to the accumulator.
+        else {
+            acc += c;
+        }
+    }
+
+    // If the accumulator is not empty, add the final word to the words vector.
+    if (!acc.empty()) {
+        words.push_back(acc);
+    }
+}
