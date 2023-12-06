@@ -35,19 +35,7 @@ bool isDigit(std::string& line, int index, int* digit) {
     return substringStartsWithDigit;
 }
 
-int day01() {
-    // Initialize a vector to store the file input and set the input file name.
-    std::vector<std::string> lines;
-    std::string fileName = "../day-01/input.txt";
-
-    // Read the file and store the result in the lines vector.
-    int res = readFile(fileName, lines);
-
-    // If an error occurred during the file reading, print an error message.
-    if (res != 0) {
-        printf("Error reading the input file.");
-    }
-
+void day01(std::vector<std::string> &lines) {
     // Initialize a counter variable to store the sum.
     int counter = 0;
 

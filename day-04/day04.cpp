@@ -20,19 +20,7 @@ void awardWinningCards(int &number, int &amountOfCards, std::map<int, int> &winn
 }
 
 
-void day04() {
-    // Initialize a vector to store the file input and set the input file name.
-    std::vector<std::string> lines;
-    std::string fileName = "../day-04/input.txt";
-
-    // Read the file and store the result in the lines vector.
-    int res = readFile(fileName, lines);
-
-    // If an error occurred during the file reading, print an error message.
-    if (res != 0) {
-        printf("Error reading the input file.");
-    }
-
+void day04(std::vector<std::string> &lines) {
     // ---------------- Part 1 ----------------
     // Create a variable to hold the total score.
     int score = 0;

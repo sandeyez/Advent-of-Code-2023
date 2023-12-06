@@ -3,19 +3,7 @@
 #include<vector>
 #include<string>
 
-void day06() {
-    // Initialize a vector to store the file input and set the input file name.
-    std::vector<std::string> lines;
-    std::string fileName = "../day-06/input.txt";
-
-    // Read the file and store the result in the lines vector.
-    int res = readFile(fileName, lines);
-
-    // If an error occurred during the file reading, print an error message.
-    if (res != 0) {
-        printf("Error reading the input file.");
-    }
-
+void day06(std::vector<std::string> &lines) {
     // ---------------- Part 1 ----------------
     // Initialize two vectors to store the times and the distances.
     std::vector<int> times;
@@ -92,5 +80,5 @@ void day06() {
 
     solveWithABCFormula(1, -time, distance, x1, x2);
 
-    printf("Part 2: %d\n", abs(x2 - x1));
+    printf("Part 2: %ld\n", abs(x2 - x1));
 }

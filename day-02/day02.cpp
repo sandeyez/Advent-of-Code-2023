@@ -29,19 +29,7 @@ void splitStringOnSpace(std::string& s, std::vector<std::string>& result) {
     result.push_back(substring);
 }
 
-int day02() {
-    // Initialize a vector to store the file input and set the input file name.
-    std::vector<std::string> lines;
-    std::string fileName = "../day-02/input.txt";
-
-    // Read the file and store the result in the lines vector.
-    int res = readFile(fileName, lines);
-
-    // If an error occurred during the file reading, print an error message.
-    if (res != 0) {
-        printf("Error reading the input file.");
-    }
-
+void day02(std::vector<std::string> &lines) {
     // ---------------- Part 1 ----------------
     // Initialize a counter variable to store the number of possible game IDs.
     int counter = 0;
