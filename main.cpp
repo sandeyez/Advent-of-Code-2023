@@ -3,12 +3,13 @@
 #include "day-03/day03.h"
 #include "day-04/day04.h"
 #include "day-05/day05.h"
+#include "day-06/day06.h"
 #include <stdio.h>
 #include <chrono>
 using namespace std::chrono;
 
 int main() {
-    int day = 5;
+    int day = 6;
 
     printf("Advent of Code 2023 - Day %d \n", day);
     printf("====================================\n");
@@ -29,6 +30,9 @@ int main() {
             break;
         case 5:
             day05();
+            break;
+        case 6:
+            day06();
             break;
     }
     auto stop = high_resolution_clock::now();

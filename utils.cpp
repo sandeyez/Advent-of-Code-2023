@@ -50,3 +50,24 @@ void splitOnSpace(std::string& line, std::vector<std::string>& words) {
         words.push_back(acc);
     }
 }
+
+int solveWithABCFormula(long a, long b, long c, long& x1, long& x2) {
+    // Calculate the discriminant.
+    long discriminant = b * b - 4 * a * c;
+
+    // If the discriminant is negative, return 1 to indicate that the equation has no real solutions.
+    if (discriminant < 0) {
+        return 1;
+    }
+
+    // Calculate the two solutions.
+    x1 = (-b + sqrt(discriminant)) / (2 * a);
+    x2 = (-b - sqrt(discriminant)) / (2 * a);
+
+    // Return 0 to indicate success.
+    return 0;
+}
+
+int solveWithABCFormula(int a, int b, int c, int& x1, int& x2) {
+    solveWithABCFormula((long) a, (long) b, (long) c, (long&) x1, (long&) x2);
+}
